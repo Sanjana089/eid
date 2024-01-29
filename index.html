@@ -12,9 +12,17 @@
 </head>
 
 <body>
-    <img id="moon" src="moon1.png" alt="Moon Image"> <!-- Replace 'moon.png' with the actual path to your moon image -->
+    <img id="moon" src="moon2.png" alt="Moon Image">
+
+    <div id="cresent" onmouseup="drop(event)" ontouchend="drop(event)"></div>
+
+    <div id="movable-element" onmousedown="pickup(event)" ontouchstart="pickup(event)" onmousemove="move(event)"
+        ontouchmove="move(event)" onmouseup="drop(event)" ontouchend="drop(event)">
+        <img id="star" src="star.png" width="35" height="35">
+    </div>
     <div id="greeting1">Eid Mubarak!</div>
     <div id="greeting2">Wishing you joy and happiness on this auspicious occasion.</div>
+    <div class="hidden greeting2">Eid Mubarak</div>
     <script src="script.js" type="text/javascript"></script>
 </body>
 

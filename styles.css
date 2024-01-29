@@ -11,17 +11,37 @@ body {
     align-items: center;
     color: white;
     font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevent scrolling while dragging */
 }
 
 #moon {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 50px; /* Adjust the width as needed */
+    width: 110px;
 }
+
+#cresent {
+    position: absolute;
+    top: 48px;
+    left: 76px;
+    width: 40px;
+    height: 40px;
+}
+#star {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    width: 35px;
+}   
 
 #greeting1, #greeting2 {
     text-align: center;
     font-size: 24px;
     margin: 10px;
+    margin-top: 40px;
+}
+
+.hidden {
+    opacity: 0;
 }

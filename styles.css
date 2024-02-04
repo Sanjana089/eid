@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('t1.png') ;
+    background-image: url('t1.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -10,8 +10,9 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden; /* Prevent scrolling while dragging */
+    font-family: "Pacifico", sans-serif;
+    /* Prevent scrolling while dragging */
+    overflow: hidden;
 }
 
 #moon {
@@ -28,14 +29,24 @@ body {
     width: 40px;
     height: 40px;
 }
+
+#star-shadow {
+    position: absolute;
+    top: 46px;
+    left: 74px;
+    width: 40px;
+    height: 40px;
+}
+
 #star {
     position: absolute;
     top: 20px;
     right: 35px;
     width: 35px;
-}   
+}
 
-#greeting1, #greeting2 {
+#greeting1,
+#greeting2 {
     text-align: center;
     font-size: 24px;
     margin: 10px;

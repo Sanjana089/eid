@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-family: "Pacifico", sans-serif;
+    font-family: "Satisfy", sans-serif;
     /* Prevent scrolling while dragging */
     overflow: hidden;
 }
@@ -36,21 +36,49 @@ body {
     left: 74px;
     width: 40px;
     height: 40px;
+    /* Star stencil twinkle animation */
+    opacity: 0.7;
+    animation: twinkling 0.9s infinite alternate ease-in-out;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
 }
 
 #star {
+    position: absolute;
+    width: 35px;
+}
+
+#movable-element {
     position: absolute;
     top: 20px;
     right: 35px;
     width: 35px;
 }
 
-#greeting1,
+#greeting1 {
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    bottom: 60px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    font-family: "Sacramento", sans-serif;
+}
+
 #greeting2 {
     text-align: center;
-    font-size: 24px;
-    margin: 10px;
-    margin-top: 40px;
+    font-size: 18px;
+    position: relative;
+    bottom: 80px;
+    padding: 20px;
 }
 
 .hidden {

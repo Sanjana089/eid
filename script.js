@@ -31,11 +31,11 @@ function move(event) {
 }
 
 function drop(event) {
-    if (!dropped && event?.changedTouches[0]?.clientX > 300) {
+    if (!dropped && event?.changedTouches && event?.changedTouches[0]?.clientX > 300) {
         moving.style.position = 'absolute';
         star.style.position = 'absolute';
     }
-    if (!dropped && moving && event?.changedTouches[0]?.clientX < 120) {
+    if (!dropped && moving && event?.changedTouches && event?.changedTouches[0]?.clientX < 120) {
         document.getElementById('cresent').appendChild(moving);
         dropped = true; // prevent anymore touch events once it reaches its place
         easeInGreeting();
@@ -50,7 +50,25 @@ function drop(event) {
 
         moving = null;
     }
-    document.getElementById('arrow').remove();
+
+    // define drop event for non-touch screen
+    if (moving && event.clientX < 110 && event.clientY < 200) {
+        document.getElementById('cresent').appendChild(moving);
+        dropped = true; // prevent anymore touch events once it reaches its place
+        easeInGreeting();
+        moving.style.left = '';
+        moving.style.top = '';
+        moving.style.height = '';
+        moving.style.width = '';
+        moving.style.position = '';
+        moving.style.zIndex = '';
+        star.style.top = '-20px';
+        star.style.left = '30px';
+
+        moving = null;
+    }
+    const arrow = document.getElementById('arrow');
+    if (arrow) arrow.remove();
 }
 
 function easeInGreeting() {

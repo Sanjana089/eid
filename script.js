@@ -67,8 +67,8 @@ function drop(event) {
 
         moving = null;
     }
-    const arrow = document.getElementById('arrow');
-    if (arrow) arrow.remove();
+    const touch = document.getElementById('touch');
+    if (touch) touch.remove();
 }
 
 function easeInGreeting() {
@@ -81,25 +81,34 @@ function easeInGreeting() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const arrow = document.getElementById('arrow');
+    const touch = document.getElementById('touch');
     if (!dropped) {
         setTimeout(function () {
-            arrow.classList.remove('hide');
-            arrow.classList.add('show');
-        }, 4000); // Show arrow after 5 seconds
+            touch.classList.remove('hide');
+            touch.classList.add('show');
+        }, 4000); // Show touch after 5 seconds
         setTimeout(function () {
-            arrow.classList.add('hide');
-            arrow.classList.remove('show');
-        }, 8000); // Hide arrow after 5 seconds
+            touch.classList.add('hide');
+            touch.classList.remove('show');
+        }, 8000); // Hide touch after 5 seconds
 
         setTimeout(function () {
-            arrow.classList.remove('hide');
-            arrow.classList.add('show');
-        }, 14000); // Show arrow after 5 seconds
+            touch.classList.remove('hide');
+            touch.classList.add('show');
+        }, 14000); // Show touch after 5 seconds
         setTimeout(function () {
-            arrow.classList.add('hide');
-            arrow.classList.remove('show');
-        }, 19000); // Hide arrow after 5 seconds
+            touch.classList.add('hide');
+            touch.classList.remove('show');
+        }, 18000); // Hide touch after 5 seconds
+
+        setTimeout(function () {
+            touch.classList.remove('hide');
+            touch.classList.add('show');
+        }, 22000); // Show touch after 5 seconds
+        setTimeout(function () {
+            touch.classList.add('hide');
+            touch.classList.remove('show');
+        }, 26000); // Hide touch after 5 seconds
     }
 
 });

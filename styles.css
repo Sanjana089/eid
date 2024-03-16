@@ -65,7 +65,7 @@ body {
 
 #greeting1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     position: relative;
     bottom: 60px;
     opacity: 0;
@@ -75,7 +75,7 @@ body {
 
 #greeting2 {
     text-align: center;
-    font-size: 18px;
+    font-size: 25px;
     position: relative;
     bottom: 80px;
     padding: 20px;
@@ -85,22 +85,58 @@ body {
     opacity: 0;
 }
 
-.arrow {
-    width: 50px;
-    height: 50px;
+.touch {
+    width: 30px;
+    height: auto;
     font-size: 65px;
     position: absolute;
-    top: 62px;
-    right: 45px;
-    transform: translate(-50%, -50%) rotate(-188deg);
-    animation: twinkling 0.9s infinite alternate ease-in-out;
+    top: 60px;
+    opacity: 85%;
+    right: 0px;
+    transform: translate(-50%, -50%);
 }
 
 
 .hide {
     display: none;
+    top: 60px;
+    right: 15px;
 }
 
 .show {
     display: block;
+    animation: hand 4s infinite forwards ease-in-out;
+}
+
+@keyframes hand {
+    0% {
+        right: 15px;
+        top: 60px;
+    }
+
+    100% {
+        right: 87%;
+        top: 80px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    @keyframes hand {
+        0% {
+            right: 20px;
+            top: 60px;
+        }
+        100% {
+            right: 66%;
+            top: 80px;
+        }
+    }
+
+    #greeting1 {
+        font-size: 50px;
+    }
+
+    #greeting2 {
+        font-size: 18px;
+    }
 }
